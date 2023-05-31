@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../constants/colors.dart';
+import '../widgets/todo_item.dart';
 
 class MyHomePage extends StatefulWidget{
   //final String title;
@@ -40,54 +42,14 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             
             //const Text('O botão foi apertado esse numero de vezes'),
-            //Text('$_counter'),   
+            Text('$_counter'),
 
 
-            //FORMULÁRIO - INICIO
-            Container(
-              key: _formkey,
-                child: TextFormField(
-                  controller: taskController,
-                  style: const TextStyle(
-                    fontSize: 32,
-                    color: Colors.amber
-                  ),
-                  decoration: const InputDecoration(
-                    hintText: 'Digite uma Tarefa...',
-                    hintStyle: TextStyle(
-                      fontSize: 20,
-                    ),
-                  ),
-                  keyboardType: TextInputType.text,
-                  validator: (value){
-                    if (value != null && value.isEmpty){
-                    //if (value != null && value.length > 1){
-                      return 'Por favor preencha o campo';
-                    }
-                    return null;
-                  },
-                ),
-            ),
-
-
-              ElevatedButton(
-                onPressed: (){
-                  //if(_formkey.currentState.validate()){
-                    setState(() {
-                      _tasks.add(taskController.text);  
-                    });
-                    taskController.clear();
-                    debugPrint(taskController.text);
-                    //}
-                },
-                child:  const Text('Next'),
-              ),
-
-              // FORMULÁRIO - FIM
+           //const TodoItem(),
 
             Expanded(
             child: ListView.builder(
-                itemCount:  _tasks.length,
+                itemCount: _tasks.length,
                 itemBuilder: (context, index){
                   return Card(
                   child: ListTile(
@@ -105,9 +67,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
       floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
       floatingActionButton: FloatingActionButton(
+        backgroundColor: idblue1,
         onPressed: _addList,
         tooltip: 'Escrever tarefa',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add,),
       ),
     );
        }

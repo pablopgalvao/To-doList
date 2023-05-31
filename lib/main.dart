@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:new_todolist_flutter/pages/home_page.dart';
+//import 'package:new_todolist_flutter/pages/home_page.dart';
+import './pages/home_page.dart';
+//import 'package:new_todolist_flutter/constants/colors.dart';
 
 void main() => runApp(const MyApp());
 
@@ -11,6 +13,13 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       title: 'To-Do List',
-      home: MyHomePage());
+
+      //theme: ThemeData(
+       // primarySwatch: Colors.red,
+       // visualDensity: VisualDensity.adaptivePlatformDensity,
+     // ),
+
+      home: MyHomePage(),
+    );
   }
 }
