@@ -1,12 +1,15 @@
 import 'package:flutter/material.dart';
-//import 'package:new_todolist_flutter/pages/home_page.dart';
+
 import './pages/home_page.dart';
+//import './pages/step_form.dart';
+//import 'package:new_todolist_flutter/pages/home_page.dart';
+//import './pages/home_page.dart';
 //import 'package:new_todolist_flutter/constants/colors.dart';
 
-void main() => runApp(const MyApp());
+void main() => runApp( MyApp());
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  //const MyApp({super.key});
 
   // Este widget é a raiz do seu aplicativo.
   @override
@@ -20,6 +23,7 @@ class MyApp extends StatelessWidget {
      // ),
 
       home: MyHomePage(),
+      //home: StepForm(),
     );
   }
 }
